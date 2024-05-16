@@ -28,7 +28,7 @@ input_text = st.text_input("Ask anything, he is a bot")
 
 # Define openai llm
 llm = ChatOpenAI(model="gpt-3.5-turbo")
-output_parser = StrOutputParser()
+output_parser = StrOutputParser() # Used to parse
 chain = prompt | llm | output_parser
 
 if input_text:
